@@ -1,1 +1,129 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~assets/scss/variables.scss';
+
+
+*{
+    font-family: $font-family-primary;
+}
+
+html,
+body{
+	width: 100%;
+	min-height: 100%;
+    margin: 0;
+    font-family: $font-family-primary;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a, a:hover, a:focus, a:active{
+	outline: 0 none !important;
+    text-decoration: none;
+    color: #333;
+}
+
+button{
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+}
+
+
+button:active, button:focus{
+    outline: inherit !important;
+    box-shadow: none !important;
+    border: none;
+}
+
+input, 
+textarea, 
+select {
+    box-shadow: none;
+    outline: inherit;
+    border: none;
+    // box-sizing: border-box;
+    // padding: 5px 15px;
+}
+
+textarea{
+	resize: none;
+}
+
+select{
+    appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label{
+	margin: 0;
+	padding: 0;
+}
+
+.mr-15{
+    margin-right: 15px;
+}
+.ml-15{
+    margin-left: 15px;
+}
+.mt-15{
+    margin-top: 15px;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+.ml-30{
+    margin-left: 30px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mr-7{
+    margin-right: 7px;
+}
+.ml-7{
+    margin-left: 7px;
+}
+.mt-7{
+    margin-top: 7px;
+}
+.mb-7{
+    margin-bottom: 7px;
+}
+.mr-0{
+    margin-right: 0px !important;
+}
+.ml-0{
+    margin-left: 0px !important;
+}
+.mt-0{
+    margin-top: 0px !important;
+}
+.mb-0{
+    margin-bottom: 0px !important;
+}
+
+.box-15{
+    box-sizing: border-box;
+    padding: 15px;
+}
+.box-30{
+    box-sizing: border-box;
+    padding: 30px;
+}

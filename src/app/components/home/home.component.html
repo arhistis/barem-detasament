@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <button class="shapeshifter" [ngClass]="{ 'play' : clicked==true, 'd-none' : visible, 'd-inline-block' : !visible  }" (click)="hideButton()" style="background-image: url(../../assets/img/sprite_60fps.svg)"></button>
+      <button (click)="reverseClick()">revert</button>
+      <form class="d-flex flex-column">
+        <div class="d-flex w-100 align-items-end mb-2">
+          <div class="icon d-flex align-items-center justify-content-start">
+            <img src="../../../assets/img/man.png" width="auto" height="24px">
+          </div>
+          <div class="w-100">
+            <input type="text" name="Name" autocomplete="off" required spellcheck="false">
+            <label for="name">
+              <span>Nume</span>
+            </label>
+          </div>
+        </div>
+        <div class="d-flex w-100 align-items-end varsta">
+          <div class="icon icon-birthday d-flex align-items-center justify-content-start">
+            <img src="../../../assets/img/birthday.png" width="auto" height="22px">
+          </div>
+          <div class="w-100">
+            <input type="number" name="Name" autocomplete="off" required spellcheck="false">
+            <label for="name">
+              <span>Varsta</span>
+            </label>
+          </div>
+        </div>
+        <div class="d-flex w-100 align-items-end mb-2">
+          <div class="icon icon-warning d-flex align-items-center justify-content-start">
+            <img src="../../../assets/img/warning.png" width="auto" height="22px">
+          </div>
+          <div class="w-100">
+            <textarea name="context" autocomplete="off" required spellcheck="false"></textarea>
+            <label for="name">
+              <span>Context</span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
