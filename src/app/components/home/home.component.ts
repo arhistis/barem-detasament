@@ -9,6 +9,9 @@ export class HomeComponent implements OnInit {
 
   clicked: boolean;
   visible: boolean;
+  nume: String;
+  varsta: Number;
+  context: String;
 
   constructor() { }
 
@@ -28,6 +31,10 @@ export class HomeComponent implements OnInit {
   reverseClick(){
     this.clicked = false;
     this.visible = false;
+  }
+
+  show(){
+    console.log(this.nume,this.varsta,this.context);
   }
 
 }

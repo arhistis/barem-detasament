@@ -19,16 +19,17 @@
   animation-name: play36;
 }
 
-.icon{
-    height: 30px;
-    width: 36px;
-    padding-bottom: 10px;
-    &.icon-birthday{
-        padding-bottom: 16px;
-    }
-    &.icon-warning{
-        padding-bottom: 80px;
-    }
+section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.field{
+    overflow: hidden;
 }
 
 input,
@@ -40,6 +41,7 @@ textarea{
     position: relative;
     z-index: 2;
     background: transparent;
+    margin-left: 40px;
 }
 
 input + label,
@@ -51,16 +53,36 @@ textarea + label{
     margin: 0;
     width: 0;
     border-top: 1px solid #ccc;
+    left: 37px;
     transition: all 200ms ease;
     height: 0;
 
-    & > span{
+    > span{
         position: absolute;
         font-size: 1.2em;
         color: #666;
         top: -34px;
+        // left: 40px;
         transition: all 200ms ease;
         z-index: 0;
+    }
+
+    > .icon{
+        position: absolute;
+        left: -37px;
+        top: -34px;
+        width: 22px;
+        height: 22px;
+
+        &.icon-varsta{
+            top: -36px;
+        }
+        
+        > img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 }
 
@@ -78,7 +100,7 @@ textarea:valid + label{
     width: 100%;
     border-top: 1px solid $red;
 
-    & > span{
+    > span{
         top: -50px;
         font-size: 0.8em;
         color: #999;
@@ -93,26 +115,50 @@ textarea:valid:not(:focus) + label{
 textarea{
     width: 100%;
     resize: none;
-    // padding-top: 0 !important;
-    // margin-top: 15px;
-    // top: -13px;
-    overflow: hidden;
+    padding-top: 0 !important;
+    height: 120px;
     box-sizing: border-box;
 }
 
+textarea:focus,
+textarea:valid{
+    margin-top: 15px;
+}
+
 textarea + label{
-    & > span{
-        top: -95px;
+    > span{
+        top: -127px;
+    }
+
+    > .icon{
+        top: -125px;
     }
 }
 
 textarea:focus + label,
 textarea:valid + label{
     >span{
-        top: -100px;
+        top: -143px;
     }
 }
 
-.varsta{
-    margin-bottom: 18px;
+.button{
+    opacity: 0;
+    animation: appear 300ms forwards;
+}
+
+form{
+    opacity: 0;
+    animation: appear 300ms forwards;
+}
+
+.opacity-animation{
+    opacity: 0;
+    animation: appear 300ms forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
 }
