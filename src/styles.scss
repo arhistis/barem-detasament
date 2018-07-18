@@ -15,6 +15,15 @@ body{
     font-family: $font-family-primary;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p{
+	margin: 0;
+}
+
 ul{
 	list-style-type: none;
 	margin: 0;
@@ -126,4 +135,80 @@ label{
 .box-30{
     box-sizing: border-box;
     padding: 30px;
+}
+
+.appear-animation{
+    opacity: 0;
+    animation: appear 300ms forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+.disappear-animation{
+    opacity: 1;
+    animation: disappear 300ms forwards;
+}
+
+@keyframes disappear {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes expand {
+  100% {
+    width: 50px;
+  }
+}
+
+.title{
+    width: 70%;
+    margin: 30px auto 60px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.button-round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px $red;
+    transition: background-color 300ms ease-in-out;
+
+    &.full{
+      color: white;
+      background-color: $red;  
+    }
+
+    &.full:active{
+        background-color: #cd0001;
+    }
+}
+
+.button-square{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    width: 100%;
+    border: solid 1px $red !important;
+    transition: background-color 300ms ease-in-out;
+
+    border-radius: 2px;
+
+    &.full{
+      color: white;
+      background-color: $red;  
+    }
+
+    &.full:active{
+        background-color: #cd0001;
+    }
 }

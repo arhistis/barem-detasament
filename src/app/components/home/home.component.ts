@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,9 @@ export class HomeComponent implements OnInit {
   varsta: Number;
   context: String;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.clicked = false;
@@ -24,17 +27,13 @@ export class HomeComponent implements OnInit {
     this.clicked=true;
     setTimeout(() => {
       this.visible=true;
+      this.router.navigate(['informatii-victima']);
     }, 500);
-
   }
 
   reverseClick(){
     this.clicked = false;
     this.visible = false;
-  }
-
-  show(){
-    console.log(this.nume,this.varsta,this.context);
   }
 
 }

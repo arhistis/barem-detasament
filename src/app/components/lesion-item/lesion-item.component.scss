@@ -1,0 +1,15 @@
+@import '~assets/scss/variables.scss';
+
+.lesion-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-radius: 2px;
+    width: 100%;
+    min-height: 42px;
+    background-color: $red;
+    color: white;
+    margin-bottom: 5px; 
+}

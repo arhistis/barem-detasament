@@ -1,0 +1,120 @@
+@import '~assets/scss/variables.scss';
+
+.field{
+    overflow: hidden;
+}
+
+input,
+textarea{
+    font-size: 1.3em;
+    padding: 3px 7px;
+    width: 100%;
+    transition: all 200ms ease;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    margin-left: 40px;
+}
+
+input + label,
+textarea + label{
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    border-top: 1px solid #ccc;
+    left: 37px;
+    transition: all 200ms ease;
+    height: 0;
+
+    > span{
+        position: absolute;
+        font-size: 1.2em;
+        color: #666;
+        top: -34px;
+        // left: 40px;
+        transition: all 200ms ease;
+        z-index: 0;
+    }
+
+    > .icon{
+        position: absolute;
+        left: -37px;
+        top: -34px;
+        width: 22px;
+        height: 22px;
+
+        &.icon-varsta{
+            top: -36px;
+        }
+        
+        > img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+input:focus,
+input:valid,
+textarea:focus,
+textarea:valid{
+    padding-top: 15px;
+}
+
+input:focus + label,
+input:valid + label,
+textarea:focus + label,
+textarea:valid + label{
+    width: 100%;
+    border-top: 1px solid $red;
+
+    > span{
+        top: -50px;
+        font-size: 0.8em;
+        color: #999;
+    }
+}
+
+input:valid:not(:focus) + label,
+textarea:valid:not(:focus) + label{
+    border-top: 1px solid rgba(255, 255, 255, 0);
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    padding-top: 0 !important;
+    height: 120px;
+    box-sizing: border-box;
+}
+
+textarea:focus,
+textarea:valid{
+    margin-top: 15px;
+}
+
+textarea + label{
+    > span{
+        top: -127px;
+    }
+
+    > .icon{
+        top: -125px;
+    }
+}
+
+textarea:focus + label,
+textarea:valid + label{
+    >span{
+        top: -143px;
+    }
+}
+
+.button-holder{
+    width: 0;
+    animation: expand 300ms forwards;
+}
