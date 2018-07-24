@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Modal</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <ul>
+    <li *ngFor="let lesion of lesions">
+      <button type="button" (click)="select(lesion)">{{ lesion.nume }}</button>
+    </li>
+  </ul>
+</div>

@@ -5,11 +5,18 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 10px;
     border-radius: 2px;
     width: 100%;
     min-height: 42px;
     background-color: $red;
     color: white;
-    margin-bottom: 5px; 
+    margin-bottom: 1px; 
+    > button{
+        font-size: 0.8em;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
 }

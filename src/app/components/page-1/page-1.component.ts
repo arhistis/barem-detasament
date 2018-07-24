@@ -1,3 +1,4 @@
+import { LesionService } from './../../services/lesion.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '../../../../node_modules/@angular/router';
 
@@ -14,16 +15,21 @@ export class Page1Component implements OnInit {
   context: String;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private lesionService: LesionService
   ) { }
 
   ngOnInit() {
-    this.nume = "Cornel";
-    this.varsta = 23;
-    this.context = "context";
+    var info = this.lesionService.getVictimInfo();
+    console.log(info);
+    this.nume = info.nume;
+    this.varsta = info.varsta;
+    this.context = info.context;
+    console.log(this.nume);
   }
 
   nextPage() {
+    this.lesionService.setVictimInfo(this.nume, this.varsta, this.context);
     this.clicked = true;
     setTimeout(() => {
       this.router.navigate(['leziuni-victima']);

@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Unde se afla leziunea?</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <ul>
+    <li *ngFor="let location of locations">
+      <button type="button" (click)="select(location)">{{ location }}</button>
+    </li>
+  </ul>
+</div>

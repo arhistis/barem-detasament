@@ -212,3 +212,42 @@ label{
         background-color: #cd0001;
     }
 }
+
+.lesions-modal{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 8px;
+    height: 100%;
+    .modal-content{
+        border: 0 !important;
+        border-radius: 0;
+        height: 100%;
+        app-lesions-list-modal{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        app-lesion-location-list-modal{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .modal-body{
+            padding: 0;
+            flex-grow: 1;
+            overflow-y: scroll;
+            ul{
+                width: 100%;
+                li{
+                    width: 100%;
+                    border-bottom: solid 1px #e9ecef;
+                    button{
+                        width: 100%;
+                        text-align: left;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

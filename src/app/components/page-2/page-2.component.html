@@ -2,11 +2,13 @@
   <div class="appear-animation h-100 w-100 d-flex flex-column" [ngClass]="{'disappear-animation': clicked}">
     <h1 class="title">Alege leziunile victimei</h1>
     <div class="w-100 flex-grow-1 d-flex flex-column lesions-list">
-      <app-lesion-item *ngFor="let lesion of lesions"
-        [lesionName]="lesion.lesion"
-        [lesionLocation]="lesion.location">
+      <app-lesion-item *ngFor="let lesion of lesions; index as i"
+        [lesionName]="lesion.lesion.nume"
+        [lesionLocation]="lesion.location"
+        [index]="i"
+        (onDelete)="onDelete($event)">
       </app-lesion-item>
-      <button type="button" class="button-square" (click)="addLesion()">
+      <button type="button" class="mt-15" (click)="addLesion()">
         <i class="fa fa-plus"></i>
       </button>
     </div>
@@ -14,7 +16,7 @@
       <button type="button" class="button button-round" (click)="previousPage()">
         <i class="fa fa-arrow-left"></i>
       </button>
-      <div class="ml-15 button-holder width-animation" *ngIf="nume && varsta && context">
+      <div class="ml-15 button-holder width-animation" *ngIf="lesions.length">
         <button class="button button-round full appear-animation" type="button" (click)="nextPage()">
           <i class="fa fa-arrow-right"></i>
         </button>
