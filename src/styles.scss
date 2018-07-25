@@ -137,6 +137,10 @@ label{
     padding: 30px;
 }
 
+.flex-grow-1{
+    flex-grow: 1;
+}
+
 .appear-animation{
     opacity: 0;
     animation: appear 300ms forwards;

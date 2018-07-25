@@ -62,4 +62,12 @@ export class BaremComponent implements OnInit {
       this.scor += scor;
   }
 
+  restart(){
+    this.clicked = true;
+    setTimeout(() => {
+      this.lesionService.resetVictim();
+      this.router.navigate(['informatii-victima']);
+    }, 300);
+  }
+
 }

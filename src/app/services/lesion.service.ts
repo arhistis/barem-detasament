@@ -11,7 +11,7 @@ export class LesionService {
   victim: Victim = {
     nume: "Costel",
     varsta: 23,
-    context: "context",
+    context: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, dolorum. Natus nihil",
     leziuni: []
   };
 
@@ -43,6 +43,15 @@ export class LesionService {
 
   getVictim(){
     return this.victim;
+  }
+
+  resetVictim(){
+    this.victim = {
+      nume: "",
+      varsta: null,
+      context: "",
+      leziuni: []
+    };
   }
 
 }
