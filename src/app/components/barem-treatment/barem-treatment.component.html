@@ -1,0 +1,19 @@
+<div [ngClass]="{'checked': checked == true}" class="d-flex w-100 justify-content-center item appear">
+  <small class="flex-grow-1">
+    {{ manevra.descriere }}
+  </small>
+  <div class="actions">
+    <button [ngClass]="{'full': selected == 0}" class="selectable" (click)="selectScor(0)">
+      0
+    </button>
+    <button [ngClass]="{'full': selected == manevra.punctajPartial}" class="selectable" *ngIf="manevra.punctajPartial" (click)="selectScor(manevra.punctajPartial)">
+      {{ manevra.punctajPartial }}
+    </button>
+    <button *ngIf="!manevra.punctajPartial">
+      -
+    </button>
+    <button [ngClass]="{'full': selected == manevra.punctajMaxim}" class="selectable" (click)="selectScor(manevra.punctajMaxim)">
+      {{ manevra.punctajMaxim }}
+    </button>
+  </div>
+</div>

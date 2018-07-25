@@ -1,0 +1,12 @@
+@import '~assets/scss/variables.scss';
+
+.lesion-title{
+    background-color: $red;
+    color: white;
+    padding: 3px 15px;
+}
+
+app-barem-treatment:not(:last-child){
+    display: flex;
+    border-bottom: solid 1px #e9ecef;
+}

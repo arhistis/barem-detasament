@@ -1,3 +1,8 @@
-<p>
-  barem-lesion works!
+<p class="lesion-title">
+  {{ lesion.nume }}
 </p>
+<app-barem-treatment *ngFor="let manevra of lesion.manevre"  class="appear-animation"
+  [manevra]="manevra"
+  (selectedScor)="sendScor($event)">
+</app-barem-treatment>
+

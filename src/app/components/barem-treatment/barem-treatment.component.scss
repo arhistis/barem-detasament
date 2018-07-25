@@ -1,0 +1,53 @@
+@import '~assets/scss/variables.scss';
+
+.actions{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    >button{
+        padding: 0;
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 100ms ease-in-out;
+        &.selectable{
+            border: solid 1px rgba(255, 255, 255, 0);
+            border-radius: 50%;
+        }
+
+        &.full{
+            // background-color: $red;
+            border-color: red;
+            // animation: selected 600ms forwards;
+        }
+    }
+}
+
+small{
+    display: flex;
+    align-items: center;
+    color: #212529;
+    transition: color 300ms ease;
+}
+
+.item{
+    padding: 12px 15px;
+    transition: background-color 300ms ease;
+    &.checked{
+        // background-color: #faf2f2;
+        background-color: #f8f8f8;
+        >small{
+            color: #999;
+        }
+    }
+}
+
+@keyframes selected {
+  100% {
+    border-color: $red;
+    background-color: transparent;
+  }
+}

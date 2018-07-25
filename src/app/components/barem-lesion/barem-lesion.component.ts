@@ -9,11 +9,15 @@ import { Lesion } from '../../types/lesion';
 export class BaremLesionComponent implements OnInit {
 
   @Input() lesion: Lesion;
-  @Output() scorModifier: EventEmitter<number>;
+  @Output() scorModifier = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sendScor(scor: number){
+    this.scorModifier.emit(scor);
   }
 
 }
