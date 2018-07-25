@@ -1,5 +1,9 @@
 @import '~assets/scss/variables.scss';
 
+section{
+    min-height: 500px;
+}
+
 .field{
     overflow: hidden;
 }
