@@ -9,9 +9,9 @@ import { Lesion } from '../types/lesion';
 export class LesionService {
 
   victim: Victim = {
-    nume: "Costel",
-    varsta: 23,
-    context: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, dolorum. Natus nihil",
+    nume: "",
+    varsta: null,
+    context: "",
     leziuni: []
   };
 
