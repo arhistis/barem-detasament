@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "http://localhost:4040"
+  apiUrl: "https://barem-detasament-api.herokuapp.com/"
 };
