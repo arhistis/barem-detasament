@@ -9,6 +9,7 @@ import { Lesion } from '../../types/lesion';
 export class BaremLesionComponent implements OnInit {
 
   @Input() lesion: Lesion;
+  @Input() location: String;
   @Output() scorModifier = new EventEmitter<number>();
 
   constructor() { }

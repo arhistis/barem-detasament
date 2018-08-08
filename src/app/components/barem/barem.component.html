@@ -12,8 +12,17 @@
         <small class="text-center">{{ victim.context }}</small>
       </div>
 
+      <app-barem-lesion *ngFor="let lesion of generalLesions | slice:0:2;" class="appear-animation"
+        [lesion]="lesion"
+        (scorModifier)="calculateScor($event)"
+      ></app-barem-lesion>
       <app-barem-lesion *ngFor="let lesion of victim.leziuni" class="appear-animation"
         [lesion]="lesion.lesion"
+        [location]="lesion.location"
+        (scorModifier)="calculateScor($event)"
+      ></app-barem-lesion>
+      <app-barem-lesion *ngFor="let lesion of generalLesions | slice:2:generalLesions.length;" class="appear-animation"
+        [lesion]="lesion"
         (scorModifier)="calculateScor($event)"
       ></app-barem-lesion>
 

@@ -1,5 +1,5 @@
 <p class="lesion-title">
-  {{ lesion.nume }}
+  {{ lesion.nume }} {{ location?.toLowerCase() }}
 </p>
 <app-barem-treatment *ngFor="let manevra of lesion.manevre"  class="appear-animation"
   [manevra]="manevra"

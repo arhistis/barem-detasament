@@ -20,6 +20,8 @@ export class BaremComponent implements OnInit {
 
   lesions: Lesion[];
 
+  generalLesions: Lesion[];
+
   victim: Victim = {
     nume: "",
     varsta: null,
@@ -33,21 +35,18 @@ export class BaremComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    this.generalLesions = this.lesionService.getGeneralLesions();
     this.victim = this.lesionService.getVictim();
     this.victim.leziuni.forEach(lesion => {
       lesion.lesion.manevre.forEach(manevra => {
         this.scorTotal += manevra.punctajMaxim;
       });
     });
-    // this.lesionService.getLesions()
-    //   .catch((err) => {
-    //     return Observable.throw(new Error(`${err.status} ${err.msg}`));
-    //   })
-    //   .subscribe(lesions => {
-    //     this.lesions = lesions;
-    //   });
-
+    this.generalLesions.forEach(lesion => {
+      lesion.manevre.forEach(manevra => {
+        this.scorTotal += manevra.punctajMaxim;
+      });
+    });
   }
 
   previousPage() {

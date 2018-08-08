@@ -24,13 +24,15 @@ export class LesionsListModalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.lesionService.getLesions()
-      .catch((err) => {
-        return Observable.throw(new Error(`${err.status} ${err.msg}`));
-      })
-      .subscribe(lesions => {
-        this.lesions = lesions;
-      });
+    this.lesions = this.lesionService.getLesions2();
+
+    // this.lesionService.getLesions()
+    //   .catch((err) => {
+    //     return Observable.throw(new Error(`${err.status} ${err.msg}`));
+    //   })
+    //   .subscribe(lesions => {
+    //     this.lesions = lesions;
+    //   });
   }
 
   hide() {
