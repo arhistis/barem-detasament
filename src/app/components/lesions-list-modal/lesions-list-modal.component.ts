@@ -40,7 +40,7 @@ export class LesionsListModalComponent implements OnInit {
   }
 
   select(lesion: Lesion){
-    if(lesion.locatie.length){
+    if(lesion.locatie){
       const modalRef = this.modalService.show(LesionLocationListModalComponent,
         Object.assign({}, { class: 'lesions-modal', initialState: {locations: lesion.locatie}}));
       const modalContent = modalRef.content as LesionLocationListModalComponent;
