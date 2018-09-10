@@ -17,6 +17,7 @@ import { LesionLocationListModalComponent } from './components/lesion-location-l
 import { BaremComponent } from './components/barem/barem.component';
 import { BaremLesionComponent } from './components/barem-lesion/barem-lesion.component';
 import { BaremTreatmentComponent } from './components/barem-treatment/barem-treatment.component';
+import { BaremSefEchipajComponent } from './components/barem-sef-echipaj/barem-sef-echipaj.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { BaremTreatmentComponent } from './components/barem-treatment/barem-trea
     LesionLocationListModalComponent,
     BaremComponent,
     BaremLesionComponent,
-    BaremTreatmentComponent
+    BaremTreatmentComponent,
+    BaremSefEchipajComponent
   ],
   imports: [
     BrowserModule,
