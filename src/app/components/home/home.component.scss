@@ -19,3 +19,17 @@
   animation-name: play36;
 }
 
+.button-normal{
+    display: flex;
+    height: 30px;
+    border: solid 1px $red;
+    border-radius: 50px;
+    font-size: 0.8em;
+    padding: 0 15px !important;
+}
+
+.button-full{
+    color: white;
+    background-color: $red;
+}
+

@@ -1,3 +1,37 @@
-<p>
-  barem-sef-echipaj works!
-</p>
+<section class="w-100 d-flex flex-column align-items-center justify-content-center">
+  <div class="appear-animation w-100 d-flex flex-column" [ngClass]="{'disappear-animation': clicked}">
+    <div class="w-100 flex-grow-1 d-flex flex-column barem">
+      <!-- <div class="info box-15 d-flex flex-column align-items-center">
+        <div class="d-flex align-items-center mb-7">
+          <div class="icon mr-7">
+            <img src="../../../assets/img/man.png">
+          </div>
+          <p>{{ victim.nume }}, {{ victim.varsta}} ani</p>
+        </div>
+
+        <small class="text-center">{{ victim.context }}</small>
+      </div> -->
+
+      <app-barem-lesion *ngFor="let lesion of liderLesions | slice:0:2;" class="appear-animation" [lesion]="lesion" (scorModifier)="calculateScor($event)"></app-barem-lesion>
+      <app-barem-lesion *ngFor="let lesion of victim.leziuni" class="appear-animation" [lesion]="lesion.lesion" [location]="lesion.location"
+        (scorModifier)="calculateScor($event)"></app-barem-lesion>
+      <app-barem-lesion *ngFor="let lesion of liderLesions | slice:2:liderLesions.length;" class="appear-animation" [lesion]="lesion"
+        (scorModifier)="calculateScor($event)"></app-barem-lesion>
+
+      <div class="scor">
+        <h5>Punctaj</h5>
+        <span>{{ scor }}
+          <small>/ {{ scorTotal }}</small>
+        </span>
+      </div>
+    </div>
+    <div class="appear-animation d-flex justify-content-center actions box-30">
+      <button type="button" class="button button-round" (click)="previousPage()">
+        <i class="fa fa-arrow-left"></i>
+      </button>
+      <!-- <button type="button" class="button button-normal button-full ml-15" (click)="restart()">
+        Alege alta victima
+      </button> -->
+    </div>
+  </div>
+</section>

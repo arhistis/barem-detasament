@@ -1,6 +1,7 @@
 <section class="h-100 w-100 d-flex flex-column align-items-center justify-content-center">
-  <div class="appear-animation">
-    <button class="shapeshifter" [ngClass]="{ 'play' : clicked==true, 'd-none' : visible, 'd-inline-block' : !visible  }" (click)="hideButton()"
+  <div class="appear-animation d-flex flex-column align-items-center">
+    <button class="shapeshifter mb-30" [ngClass]="{ 'play' : clicked==true, 'd-none' : visible, 'd-inline-block' : !visible  }" (click)="hideButton()"
       style="background-image: url(../../assets/img/sprite_60fps.svg)"></button>
+    <button type="button" class="button button-normal button-full" routerLink="barem-sef-echipaj" >Barem sef echipaj</button>
   </div>
 </section>

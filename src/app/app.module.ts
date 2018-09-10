@@ -44,6 +44,7 @@ import { BaremSefEchipajComponent } from './components/barem-sef-echipaj/barem-s
       { path: 'informatii-victima', component: Page1Component },
       { path: 'leziuni-victima', component: Page2Component },
       { path: 'barem', component: BaremComponent },
+      { path: 'barem-sef-echipaj', component: BaremSefEchipajComponent },
     ]),
     ModalModule.forRoot(),
   ],
